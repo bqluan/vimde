@@ -1,25 +1,14 @@
-syntax enable
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
 
-if has('gui_running')
-    set background=light
-else
-    set background=dark
-endif
-
-let g:solarized_hitrail=1
+set background=dark
 colorscheme solarized
 
-set guifont=Menlo:h14
+map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-set nobackup
-set nowb
-set noswapfile
-
-setlocal tabstop=8
-setlocal shiftwidth=8
-setlocal noexpandtab
-
-setlocal smarttab
-
-setlocal autoindent
-setlocal smartindent
+autocmd Filetype html setlocal ts=2 sts=2 sw=2 et
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 et
+autocmd Filetype vue setlocal ts=2 sts=2 sw=2 et
+autocmd Filetype yaml setlocal ts=2 sts=2 sw=2 et
