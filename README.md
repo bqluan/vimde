@@ -1,2 +1,3 @@
-# vim-scripts
-My Vim preferences
+# vimde
+
+My Vim Development Environment, color schemes, configurations and plugins.
